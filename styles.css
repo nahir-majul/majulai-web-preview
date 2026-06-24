@@ -386,12 +386,12 @@ a.partner .pn::after{content:"↗";font-family:var(--font-body);font-weight:600;
    additive animation when .in is added. No persistent hidden state, so
    content can never get stuck invisible if frames/JS/observer don't run. */
 @media (prefers-reduced-motion:no-preference){
-  html.js .reveal.in{animation:revealIn .7s cubic-bezier(.2,.7,.2,1)}
+  html.js .reveal.in{animation:revealIn .8s cubic-bezier(.25,.46,.45,.94)}
   html.js .reveal.in.d1{animation-delay:.06s}
   html.js .reveal.in.d2{animation-delay:.12s}
   html.js .reveal.in.d3{animation-delay:.18s}
   html.js .reveal.in.d4{animation-delay:.24s}
-  @keyframes revealIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+  @keyframes revealIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 }
 
 /* ---------- audience fork ---------- */
