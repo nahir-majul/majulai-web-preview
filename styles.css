@@ -32,7 +32,14 @@
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;background:var(--bg)}
+
+/* ---------- transición entre páginas (evita el destello blanco al navegar) ---------- */
+@view-transition{navigation:auto}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.35s}
+@media (prefers-reduced-motion:reduce){
+  ::view-transition-old(root),::view-transition-new(root){animation:none}
+}
 body{
   font-family:var(--font-body);
   background:var(--bg);
