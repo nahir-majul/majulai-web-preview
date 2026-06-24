@@ -80,8 +80,14 @@
         nav.classList.toggle('on-dark', isDark(best.s));
       }
     }
-    window.addEventListener('scroll',setActive,{passive:true});
-    window.addEventListener('resize',setActive,{passive:true});
+    var ticking=false;
+    function onScroll(){
+      if(ticking) return;
+      ticking=true;
+      requestAnimationFrame(function(){ setActive(); ticking=false; });
+    }
+    window.addEventListener('scroll',onScroll,{passive:true});
+    window.addEventListener('resize',onScroll,{passive:true});
     setActive();
   }
   if(document.readyState!=='loading'){initNav();initReveal();initForm();initDotNav();}
