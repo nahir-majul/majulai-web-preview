@@ -43,7 +43,7 @@
       if(btn)btn.disabled=true;
       var data={};
       new FormData(f).forEach(function(v,k){data[k]=v;});
-      fetch('https://formsubmit.co/ajax/info@majul.ai',{
+      fetch('https://formsubmit.co/ajax/nahir@majul.ai',{
         method:'POST',
         headers:{'Content-Type':'application/json','Accept':'application/json'},
         body:JSON.stringify(data)
